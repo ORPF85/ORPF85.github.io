@@ -5,63 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OPRDF Official Platform</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+        /* CSS Styling and Layout Rules */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; scroll-behavior: smooth; }
         body { background: #f8f9fa; color: #2c3e50; }
-        
-        /* Navigation Bar */
-        header {
-            background: #ffffff;
-            padding: 15px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
+        header { background: #ffffff; padding: 15px 8%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 12px rgba(0,0,0,0.08); sticky: top; z-index: 1000; }
         .logo { font-size: 26px; font-weight: 800; color: #0056b3; letter-spacing: 1px; }
-
-        /* Interactive Hero Banner */
+        
+        /* Massive Interactive Hero Banner */
         .interactive-banner {
-            background: linear-gradient(rgba(0, 34, 68, 0.85), rgba(0, 86, 179, 0.9)), url('https://images.unsplash.com/photo-1532375811409-905115c3b4a5?q=80&w=1600') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 34, 68, 0.88), rgba(0, 86, 179, 0.92)), url('https://images.unsplash.com/photo-1532375811409-905115c3b4a5?q=80&w=1600') no-repeat center center/cover;
             color: white;
-            padding: 150px 8%;
+            padding: 140px 8%;
             text-align: center;
             border-bottom: 8px solid #ffcc00;
         }
-        .interactive-banner h1 { font-size: 42px; margin-bottom: 20px; font-weight: 800; letter-spacing: 1px; }
-        .interactive-banner p { font-size: 19px; max-width: 800px; margin: 0 auto 40px; opacity: 0.95; line-height: 1.6; }
+        .interactive-banner h1 { font-size: 44px; margin-bottom: 20px; font-weight: 800; letter-spacing: 1px; line-height: 1.2; }
+        .interactive-banner p { font-size: 19px; max-width: 850px; margin: 0 auto 40px; opacity: 0.95; line-height: 1.7; }
         
-        /* Interactive Buttons Container */
+        /* Banner Buttons */
         .banner-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-        .btn-main {
-            display: inline-block;
-            background: #ffcc00;
-            color: #002244;
-            padding: 15px 35px;
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 16px;
-            transition: 0.3s transform, 0.3s background-color;
-            text-decoration: none;
-            box-shadow: 0 4px 15px rgba(255,204,0,0.4);
-        }
-        .btn-secondary {
-            display: inline-block;
-            background: transparent;
-            color: white;
-            padding: 15px 35px;
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 16px;
-            border: 2px solid white;
-            text-decoration: none;
-            transition: 0.3s;
-        }
+        .btn-main { display: inline-block; background: #ffcc00; color: #002244; padding: 15px 35px; border-radius: 30px; font-weight: 700; font-size: 16px; transition: 0.3s ease; text-decoration: none; box-shadow: 0 4px 15px rgba(255,204,0,0.4); }
+        .btn-secondary { display: inline-block; background: transparent; color: white; padding: 15px 35px; border-radius: 30px; font-weight: 700; font-size: 16px; border: 2px solid white; text-decoration: none; transition: 0.3s ease; }
         .btn-main:hover { background: white; color: #0056b3; transform: translateY(-3px); }
-        .btn-secondary:hover { background: white; color: #002244; transform: translateY(-3px); }
+        .btn-secondary:hover { background: #ffcc00; color: #002244; border-color: #ffcc00; transform: translateY(-3px); }
 
-        /* Quick View Section */
-        .intro-section { padding: 80px 8%; text-align: center; }
-        .intro-section h2 { font-size: 32px; color: #002244; margin-bottom: 20px; }
+        /* Dynamic Main Content Dashboard */
+        .dashboard-container { padding: 80px 8%; max-width: 1200px; margin: 0 auto; }
+        .section-title { font-size: 32px; text-align: center; color: #002244; margin-bottom: 50px; position: relative; font-weight: 800; }
+        .section-title::after { content: ''; display: block; width: 60px; height: 4px; background: #ffcc00; margin: 12px auto 0; border-radius: 2px; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: white; padding: 35px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #0056b3; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .card h3 { color: #002244; font-size: 22px; margin-bottom: 15px; }
+        .card p { color: #555; font-size: 15px; line-height: 1.6; }
+        
+        .social-box { display: flex; gap: 15px; margin-top: 20px; flex-wrap: wrap; }
+        .social-btn { padding: 10px 20px; background: #002244; color: white; border-radius: 6px; font-weight: 600; text-decoration: none; font-size: 14px; transition: 0.3s; }
+        .social-btn:hover { background: #ffcc00; color: #002244; }
     </style>
 </head>
 <body>
@@ -75,14 +56,35 @@
         <p>Empowering youth through job creation, quality healthcare, sanitation, clean environments, and fair budgets. We unite all Indians beyond caste, religion, or language under one official tongue. Driven by legal order, a balanced development model, strict candidate qualifications, and public accountability via the Right to Recall.</p>
         
         <div class="banner-buttons">
-            <a href="details.html" class="btn-main">Read Manifesto & Propaganda</a>
-            <a href="details.html" class="btn-secondary">Join OPRDF Process</a>
+            <a href="#propaganda" class="btn-main">Read Manifesto & Propaganda</a>
+            <a href="#joining" class="btn-secondary">Join OPRDF Process</a>
         </div>
     </div>
 
-    <div class="intro-section">
-        <h2>Equal Rights, One India</h2>
-        <p style="max-width: 700px; margin: 0 auto; color: #666; font-size: 18px;">Click the active buttons inside our top banner above to navigate to our separate details section layout.</p>
+    <div class="dashboard-container">
+        <h2 class="section-title">Party Manifesto & Operations Desk</h2>
+        
+        <div class="grid">
+            <div id="propaganda" class="card">
+                <h3>Propaganda & Ideology</h3>
+                <p>Our core platform stands on dismantling historic socio-economic divides. We focus purely on localized development assets, physical infrastructure updates across India, and unified language implementation for official transaction clarity.</p>
+            </div>
+            
+            <div id="joining" class="card" style="border-top-color: #ffcc00;">
+                <h3>Joining Process</h3>
+                <p>We are mobilizing a youth-led administrative infrastructure. Registration requires verified civic identification and a formal pledge to uphold strict performance standards and public accountability metrics.</p>
+            </div>
+            
+            <div class="card">
+                <h3>Official Communication Channels</h3>
+                <p>Connect directly with local leadership hubs and coordinate regional reform campaigns via our social networks:</p>
+                <div class="social-box">
+                    <a href="https://x.com" target="_blank" class="social-btn">X / Twitter</a>
+                    <a href="https://instagram.com" target="_blank" class="social-btn">Instagram</a>
+                    <a href="https://facebook.com" target="_blank" class="social-btn">Facebook</a>
+                </div>
+            </div>
+        </div>
     </div>
 
 </body>
