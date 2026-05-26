@@ -12,15 +12,166 @@
         .logo { font-size: 26px; font-weight: 800; color: #0056b3; letter-spacing: 1px; }
         
         /* Massive Interactive Hero Banner */
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPRDF Official Platform</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; scroll-behavior: smooth; }
+        body { background: #f4f7f6; color: #2c3e50; }
+        
+        /* Navigation Header */
+        header {
+            background: #ffffff;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo { font-size: 28px; font-weight: 800; color: #0056b3; letter-spacing: 1px; }
+        .logo span { color: #ffcc00; }
+
+        /* Hero Banner Section */
         .interactive-banner {
-            background: linear-gradient(rgba(0, 34, 68, 0.88), rgba(0, 86, 179, 0.92)), url('https://images.unsplash.com/photo-1532375811409-905115c3b4a5?q=80&w=1600') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 34, 68, 0.9), rgba(0, 86, 179, 0.92)), url('https://images.unsplash.com/photo-1532375811409-905115c3b4a5?q=80&w=1600') no-repeat center center/cover;
             color: white;
-            padding: 140px 8%;
+            padding: 130px 8%;
             text-align: center;
             border-bottom: 8px solid #ffcc00;
         }
-        .interactive-banner h1 { font-size: 44px; margin-bottom: 20px; font-weight: 800; letter-spacing: 1px; line-height: 1.2; }
-        .interactive-banner p { font-size: 19px; max-width: 850px; margin: 0 auto 40px; opacity: 0.95; line-height: 1.7; }
+        .interactive-banner h1 { font-size: 46px; margin-bottom: 25px; font-weight: 800; letter-spacing: 1px; line-height: 1.2; }
+        .interactive-banner p { font-size: 19px; max-width: 900px; margin: 0 auto 40px; opacity: 0.95; line-height: 1.7; font-style: italic; color: #f0f5ff; }
+        
+        /* Interactive Banner Buttons */
+        .banner-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .btn-main { display: inline-block; background: #ffcc00; color: #002244; padding: 16px 38px; border-radius: 30px; font-weight: 700; font-size: 16px; transition: 0.3s ease; text-decoration: none; box-shadow: 0 4px 15px rgba(255,204,0,0.4); }
+        .btn-secondary { display: inline-block; background: transparent; color: white; padding: 16px 38px; border-radius: 30px; font-weight: 700; font-size: 16px; border: 2px solid white; text-decoration: none; transition: 0.3s ease; }
+        .btn-main:hover { background: white; color: #0056b3; transform: translateY(-3px); }
+        .btn-secondary:hover { background: #ffcc00; color: #002244; border-color: #ffcc00; transform: translateY(-3px); }
+
+        /* Main Grid Content Sections */
+        .dashboard-container { padding: 80px 8%; max-width: 1300px; margin: 0 auto; }
+        .section-title { font-size: 36px; text-align: center; color: #002244; margin-bottom: 60px; position: relative; font-weight: 800; }
+        .section-title::after { content: ''; display: block; width: 80px; height: 5px; background: #ffcc00; margin: 15px auto 0; border-radius: 3px; }
+        
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 50px; }
+        .card { background: white; padding: 40px; border-radius: 14px; box-shadow: 0 6px 20px rgba(0,0,0,0.04); border-top: 5px solid #0056b3; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
+        .card h3 { color: #002244; font-size: 24px; margin-bottom: 20px; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
+        .card p { color: #555; font-size: 15.5px; line-height: 1.7; text-align: justify; }
+        
+        /* Lists formatting inside Cards */
+        .card ul { margin-top: 15px; padding-left: 20px; }
+        .card ul li { margin-bottom: 12px; font-size: 15px; color: #444; line-height: 1.6; }
+        .card ul li strong { color: #0056b3; }
+
+        /* Action/Footer Section */
+        .action-bar { background: #002244; color: white; padding: 50px 8%; border-radius: 14px; text-align: center; margin-top: 40px; }
+        .action-bar h3 { font-size: 28px; margin-bottom: 15px; }
+        .action-bar p { max-width: 700px; margin: 0 auto 30px; opacity: 0.9; }
+        .social-box { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .social-btn { padding: 12px 28px; background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.3); border-radius: 30px; font-weight: 600; text-decoration: none; transition: 0.3s; }
+        .social-btn:hover { background: #ffcc00; color: #002244; border-color: #ffcc00; transform: scale(1.05); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">OPRDF<span>.</span></div>
+    </header>
+
+    <!-- Main Interactive Hero Banner Area -->
+    <div class="interactive-banner">
+        <h1>ORGANIZATION FOR POLITICAL REFORM & DEVELOPMENT</h1>
+        <p>"One Nation, One Identity, Equal Progress."</p>
+        <p style="font-size: 17px; max-width: 850px; font-style: normal; margin-bottom: 35px;">The Organization for Political Reform & Development (OPRDF) stands as a historic paradigm shift in Indian governance. We refuse to view our citizens through the fractured lenses of religious divides, caste hierarchies, or linguistic disputes. OPRDF represents every single individual born of this soil as an equal Indian—endowed with identical rights, identical dignity, and identical ownership over the nation’s future. Our mission is to dismantle identity politics and replace it with a ruthless commitment to socio-economic engineering, constitutional discipline, and human development. By establishing a single, unifying official language for streamlined national administration, we build a bridge over regional barriers, turning India's vast diversity into an unbreakable, cohesive superpower.</p>
+        
+        <div class="banner-buttons">
+            <a href="#blueprint" class="btn-main">Socio-Economic Blueprint</a>
+            <a href="#protocols" class="btn-secondary">Constitutional Governance</a>
+        </div>
+    </div>
+
+    <!-- Live Content Dashboard Section -->
+    <div class="dashboard-container">
+        
+        <!-- SECTION 1: THE SOCIO-ECONOMIC BLUEPRINT -->
+        <h2 id="blueprint" class="section-title">The Socio-Economic Blueprint</h2>
+        <div class="grid-3">
+            
+            <div class="card">
+                <h3>🚀 Youth & Hyper-Employment Model</h3>
+                <p>The youth are not just voters; they are India's primary economic engine. OPRDF replaces outdated rote-learning with a localized, industry-linked technical education matrix. Our development model mandates strict fiscal incentives for labor-intensive manufacturing, green tech industries, and digital infrastructure hubs to eliminate underemployment and guarantee dignified, high-yield job markets for the new generation.</p>
+            </div>
+            
+            <div class="card" style="border-top-color: #ffcc00;">
+                <h3>🏥 Universal Healthcare & Sovereign Sanitation</h3>
+                <p>Health is a non-negotiable right, not a luxury. We pledge a total overhaul of community medical systems, implementing free, world-class diagnostic and tertiary healthcare grids across every district. Coinciding with health is our sovereign sanitation policy: modernizing municipal waste systems, enforcing strict automated recycling protocols, and treating waste management as a vital national security priority.</p>
+            </div>
+            
+            <div class="card">
+                <h3>🍃 Anti-Pollution & Eco-Capitalism</h3>
+                <p>An environment that kills its citizens cannot sustain economic growth. OPRDF introduces stringent industrial emission caps, massive urban forestry initiatives, and heavy investments in clean energy infrastructure. We will penalize ecocide while subsidizing businesses that adopt carbon-neutral operations, ensuring India breathes clean air while moving forward economically.</p>
+            </div>
+
+            <div class="card" style="border-top-color: #002244;">
+                <h3>📊 Strategic Budget Allocation</h3>
+                <p>No more opaque financing or populist freebies that bleed the treasury. OPRDF introduces an algorithmic, data-driven budget allocation protocol. Funds are transparently distributed based on region-specific socioeconomic deficits, ensuring physical infrastructure, digital connectivity, and public services receive precise, zero-waste funding.</p>
+            </div>
+
+            <div class="card">
+                <h3>⚖️ Ironclad Law & Order</h3>
+                <p>True freedom requires absolute safety. We will modernize our police forces, eliminating political interference from law enforcement and replacing it with specialized, technologically advanced investigative branches. Fast-track judicial processes will guarantee that justice is swift, objective, and blind to wealth or status.</p>
+            </div>
+            
+        </div>
+
+        <!-- SECTION 2: CONSTITUTIONAL & GOVERNANCE PROTOCOLS -->
+        <h2 id="protocols" class="section-title">The Constitutional & Governance Protocol</h2>
+        <div class="grid-3">
+            
+            <div class="card" style="border-top-color: #ffcc00;">
+                <h3>🎓 Statutory Qualifications to Run Government</h3>
+                <p>To govern a nuclear-armed nation of over a billion people, enthusiasm is not enough; competence is mandatory. OPRDF will fight to codify strict, constitutional prerequisites for anyone seeking public office:</p>
+                <ul>
+                    <li><strong>Educational & Administrative Benchmarks:</strong> Candidates must possess verified educational degrees and pass standard constitutional, economic, and civil administrative literacy certifications.</li>
+                    <li><strong>Flawless Judicial Record:</strong> Any individual with formal charges framed against them for serious criminal, economic, or communal offenses will be permanently barred from contesting elections.</li>
+                </ul>
+            </div>
+
+            <div class="card" style="border-top-color: #0056b3;">
+                <h3>🔄 The Right to Recall & Public Approval Rate</h3>
+                <p>Power belongs to the citizens, not the politicians. We introduce a legally structured, constitutionally backed Right to Recall mechanism driven by a real-time Rate of Approval:</p>
+                <ul>
+                    <li><strong>The Continuous Mandate:</strong> Elected representatives must maintain a transparent, ongoing digital and physical approval rating verified by an independent electoral authority.</li>
+                    <li><strong>The Threshold:</strong> If an official’s public approval rating drops below 40% at any point after their first year in office, a secure, local referendum is automatically triggered.</li>
+                    <li><strong>The Replacement:</strong> If a simple majority of the constituency votes "Yes" on the referendum, the member is instantly recalled and removed from office, forcing a fresh, clean election.</li>
+                </ul>
+            </div>
+            
+        </div>
+
+        <!-- JOINING HUB / FOOTER LINKS -->
+        <div class="action-bar">
+            <h3>Connect With Our Platform</h3>
+            <p>Join the movement to establish structural accountability, economic parity, and unified development across every state and region.</p>
+            <div class="social-box">
+                <a href="https://x.com" target="_blank" class="social-btn">X / Twitter</a>
+                <a href="https://instagram.com" target="_blank" class="social-btn">Instagram</a>
+                <a href="https://facebook.com" target="_blank" class="social-btn">Facebook</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
         
         /* Banner Buttons */
         .banner-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
