@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPRDF - Official Website</title>
+    <style>
+        /* Base Themes and Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+        body {
+            color: #2c3e50;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+        a { text-decoration: none; color: inherit; }
+
+        /* Navigation Bar */
+        header {
+            background: #ffffff;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 26px;
+            font-weight: 800;
+            color: #0056b3;
+            letter-spacing: 1px;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        nav ul li a {
+            font-weight: 600;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover { color: #0056b3; }
+
+        /* Hero / Welcome Banner */
+        .hero {
+            background: linear-gradient(135deg, #0056b3 0%, #002244 100%);
+            color: #ffffff;
+            padding: 120px 8% 100px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        .hero p {
+            font-size: 19px;
+            max-width: 800px;
+            margin: 0 auto 35px;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+        .btn {
+            display: inline-block;
+            background: #ffcc00;
+            color: #002244;
+            padding: 14px 35px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 16px;
+            transition: 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255,204,0,0.3);
+        }
+        .btn:hover {
+            background: #ffffff;
+            color: #0056b3;
+            transform: translateY(-3px);
+        }
+
+        /* Core Sections */
+        .section {
+            padding: 90px 8%;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 34px;
+            margin-bottom: 45px;
+            color: #002244;
+            position: relative;
+        }
+        .section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #ffcc00;
+            margin: 12px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Interactive Pillars Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .card {
+            background: #ffffff;
+            padding: 35px 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: 0.3s transform ease, 0.3s box-shadow ease;
+            border-top: 4px solid #0056b3;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+        }
+        .card h3 {
+            margin-bottom: 15px;
+            color: #002244;
+            font-size: 22px;
+        }
+        .card p {
+            font-size: 15px;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            background: #001122;
+            color: #ffffff;
+            text-align: center;
+            padding: 30px;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Responsive Layout fixes */
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; text-align: center; }
+            .hero h1 { font-size: 32px; }
+            .hero p { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">OPRDF</div>
+        <nav>
+            <ul>
+                <li><a href="#vision">Our Vision</a></li>
+                <li><a href="#pillars">Key Pillars</a></li>
+                <li><a href="#governance">Governance</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>OPRDF.github.io</h1>
+        <p>Empowering youth through job creation, quality healthcare, sanitation, clean environments, and fair budgets. We unite all Indians beyond caste, religion, or language under one official tongue. Driven by legal order, a balanced development model, strict candidate qualifications, and public accountability via the Right to Recall.</p>
+        <a href="#pillars" class="btn">Explore Our Model</a>
+    </section>
+
+    <section id="vision" class="section">
+        <h2>One India, Equal Rights</h2>
+        <p style="max-width: 850px; margin: 0 auto; font-size: 18px; color: #555; line-height: 1.8;">
+            Our framework actively breaks down historical disputes centered around religion, caste, and language. We view every citizen purely as an equal Indian deserving of foundational security, clean living standards, and economic growth.
+        </p>
+    </section>
+
+    <section id="pillars" class="section" style="background-color: #f0f4f8;">
+        <h2>Socio-Economic Blueprint</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Youth &amp; Employment</h3>
+                <p>Creating sustainable job markets, modernized training, and robust economic policies targeted directly at empowering the younger generation.</p>
+            </div>
+            <div class="card">
+                <h3>Health &amp; Sanitation</h3>
+                <p>Implementing foundational upgrades to community healthcare access alongside standardized municipal sanitation and strict pollution control.</p>
+            </div>
+            <div class="card">
+                <h3>Budget &amp; Development</h3>
+                <p>Transparent structural asset management and balanced resource allocations to ensure development spreads equally across regions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="governance" class="section">
+        <h2>Accountable Governance</h2>
+        <div class="grid" style="max-width: 900px; margin: 0 auto;">
+            <div class="card" style="border-top-color: #ffcc00;">
+                <h3>Strict Qualifications</h3>
+                <p>Establishing standardized, elite educational and ethical benchmarks required for any candidate running for legislative office.</p>
+            </div>
+            <div class="card" style="border-top-color: #ffcc00;">
+                <h3>Right to Recall</h3>
+                <p>Empowering the public with a democratic mechanism to recall and replace elected officials who fall below acceptable public approval rates.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 OPRDF. Built for an Equal, Modern India.</p>
+    </footer>
+
+</body>
+</html>
